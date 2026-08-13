@@ -38,11 +38,11 @@
   prerequisites: |
     Открыта страница регистрации Codebattle (/signup)
   test-data: |
-    Nickname: "tester123", Email: "test@example.com", Password: "12345678ыs"
+    Nickname: "tester123", Email: "test@example.com", Password: "12345678sы"
   steps:
     - Ввести валидный Nickname "tester123" и Email "test@example.com"
-    - Ввести "12345678ыs" в поле Password
-    - Повторить "12345678ыs" в поле Password Confirmation
+    - Ввести "12345678sы" в поле Password
+    - Повторить "12345678sы" в поле Password Confirmation
     - Нажать кнопку "Submit"
   expected-result: |
     Система отображает ошибку валидации "Should contain at least one letter" и блокирует отправку формы
@@ -121,7 +121,7 @@
   test-data: |
     Код решения: "def solution(n): return n + 1"
   steps:
-    - Ввести неверный код решения "def solution(n): return n + 1" в область редактора
+    - 'Ввести неверный код решения "def solution(n): return n + 1" в область редактора'
     - Нажать кнопку "Run" для запуска тестов
   expected-result: |
     Тесты выполняются, в консоли результатов отображается статус проверки (Fail / Red) с подробной информацией о несовпадении результатов, игра продолжается
@@ -135,7 +135,7 @@
   test-data: |
     Код решения: "def solution(n): return n * n"
   steps:
-    - Ввести верный код решения "def solution(n): return n * n" в область редактора
+    - 'Ввести верный код решения "def solution(n): return n * n" в область редактора'
     - Нажать кнопку "Run" для запуска тестов
   expected-result: |
     Все тесты успешно пройдены (Pass / Green), система автоматически завершает матч, фиксирует победу игрока и выводит модальное окно с результатом
